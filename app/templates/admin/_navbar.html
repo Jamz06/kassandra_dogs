@@ -1,0 +1,20 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link {% if request.path == '/admin/schedules' %}
+    active
+  {% endif %}" 
+    
+    href="{{url_for('admin.schedules')}}">Расписания</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link {% if request.path == '/admin/reports' %}
+    active
+  {% endif %}" href="{{url_for('admin.reports')}}">Отчеты</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link {% if request.path == '/admin/content' %}
+    active
+  {% endif %}" href="{{url_for('admin.content')}}">Контент</a>
+  </li>
+
+</ul>

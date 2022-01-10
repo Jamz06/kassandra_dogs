@@ -1,0 +1,17 @@
+{% extends 'admin/admin.html' %}
+
+{% block content %}
+
+<form action="">
+    {{  form.hidden_tag()}}
+    {{form.name()}}
+    <div class="custom-control custom-switch">
+        {{form.weekdays()}}
+    </div>
+    <div class="custom-control custom-switch">
+        {{form.time_starts()}}
+    </div>
+    
+</form>
+
+{% endblock %}

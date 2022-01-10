@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{super()}}
+    <link href="/static/carousel.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<main role="main">
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title> </title>
+            <rect width="100%" height="100%" fill="#777"/>
+            <text x="50%" y="50%" fill="#777" dy=".3em"></text>
+        </svg>
+        {# <img src="/static/img/index/zapis.jpg" class="d-block w-100" alt="..."> #}
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Запись на занятия</h1>
+            <p>Просто оставьте заявку и я свяжусь с вами, удобным вам способом.</p>
+            <p><a class="btn btn-lg btn-success" href="#">Записаться!</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label=" :  " preserveAspectRatio="xMidYMid slice" focusable="false"><title> </title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"> </text></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Кинолог </h1>
+            <p>это тот же самый милиционер, только собак выгуливает.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Почему?</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label=" :  " preserveAspectRatio="xMidYMid slice" focusable="false"><title> </title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"> </text></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Школа дрессировки</h1>
+            <p>Не учите своих детей врать, учить их врать вы будете сами.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Вау</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Предыдущий</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Следующий</span>
+    </a>
+  </div>
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+        <h2>Моя первая собака</h2>
+        <p>Для тех, кто решился стать хозяином собаки первый раз в жизни, будь то щенок, взятый у заводчика, или взрослая собака из приюта.</p>
+        <p><a class="btn btn-secondary" href="#">Подробнее &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+        <h2>Коррекция поведения</h2>
+        <p>Рекомендуется для хозяев, которые испытывают сложности с питомцем, связанные с нежелательным поведением: агрессия, ревность, страхи, тревожные состояния, нечистоплотность, тревога разлуки, садки и т.д. </p>
+        <p><a class="btn btn-secondary" href="#">Подробнее &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+        <h2>Неподбор</h2>
+        <p>Отработка спокойного отношения к разбросанной еде и пище из чужих рук, включая игры и упражнения, необходимые для достижения оптимального результата.</p>
+        <p><a class="btn btn-secondary" href="#">Подробнее &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Тренировка собак. В спорте главное участие.<span class="text-muted">Тренировка собак не бывает лишней.</span></h2>
+        <p class="lead">Тренировка собак. Я бы с удовольствием, но собаки уже не те.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Тренировка собак<span class="text-muted">- дело очень важное и ответственное.</span></h2>
+        <p class="lead">Ведь у каждой собаки свой характер. И если она не будет слушаться, то это может привести к очень большим последствиям.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Школа дрессировки собак</h2>
+        <p class="lead">Инструктора спрашивают у одной женщины, какую собаку она хочет. "Я хочу такую, которая не лает, не кусается, ходит на горшок, ест все подряд, а главное, — не сует нос в чужие дела", — отвечает она.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-right"><a href="#">Наверх</a></p>
+    <p>&copy; 2021-2022 Е.Бланский &middot; {#<a href="#"></a> &middot; <a href="#">Terms</a>#}</p>
+  </footer>
+</main>
+{% endblock %}

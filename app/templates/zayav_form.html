@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+    {% block styles %}
+    {{ super() }}
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+      </style>
+    {% endblock %}
+
+{% block navbar%}
+{#    {% include 'examples/_navbar_1.html' %} #}
+{% endblock %}
+
+{% block content %}
+{#
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="display-4 font-weight-normal">Запись на занятия</h1>
+            <p class="lead font-weight-normal">Оставьте заявку на занятие, на удобное время. </p>
+            <a class="btn btn-outline-success" href="#">Записаться!</a>
+        </div>
+        <div class="product-device shadow-sm d-none d-md-block"></div>
+        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+#}
+  <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
+      <div class="col-lg-7 text-center text-lg-start">
+        <h1 class="display-4 fw-bold lh-1 mb-3">Запись на занятия</h1>
+        <p class="col-lg-10 fs-4">С собой иметь собаку и хорошее настроение!</p>
+      </div>
+      <div class="col-md-10 mx-auto col-lg-5">
+        <form class="p-4 p-md-5 border rounded-3 bg-light">
+            {{form.hidden_tag()}}
+
+          <div class="form-floating mb-3">
+            <!-- <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label> -->
+            {{ form.desired_day(class='form-control') }}
+            {{ form.desired_day.label() }}
+          </div>
+          <div class="form-floating mb-3">
+            {{ form.customer_name(class='form-control') }}
+            {{ form.customer_name.label() }}
+          </div>
+          <div class="form-floating mb-3">
+            {{ form.customer_email(class='form-control') }}
+            {{ form.customer_email.label() }}
+          </div>
+          <div class="form-floating mb-3">
+            {{ form.customer_tel(class='form-control') }}
+            {{ form.customer_tel.label() }}
+          </div>
+          <div class="form-floating mb-3">
+            {{ form.contact_method(class='form-control') }}
+            {{ form.contact_method.label() }}
+          </div>
+          <div class="form-floating mb-3">
+            {{ form.comment(class='form-control') }}
+            {{ form.comment.label() }}
+          </div>
+          <!-- <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button> -->
+          {{ form.submit(class='w-100 btn btn-lg btn-primary') }}
+          <hr class="my-4">
+          <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+    <h1 class="display-5 fw-bold">Запись на занятия</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">С собой иметь собаку и хорошее настроение!</p>
+      <div class="justify-content-sm-center">
+        <form class="p-4 p-md-5 border rounded-3 bg-light">
+            {{form.hidden_tag()}}
+
+          <div class="form-floating mb-3">
+            <!-- <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label> -->
+            {{ form.desired_day(class='form-control') }}
+            {{ form.desired_day.label() }}
+          </div>
+          <div class="form-floating mb-3">
+            {{ form.customer_name(class='form-control') }}
+            {{ form.customer_name.label() }}
+          </div>
+          <div class="form-floating mb-3">
+            {{ form.customer_email(class='form-control') }}
+            {{ form.customer_email.label() }}
+          </div>
+          <div class="form-floating mb-3">
+            {{ form.customer_tel(class='form-control') }}
+            {{ form.customer_tel.label() }}
+          </div>
+          <div class="form-floating mb-3">
+            {{ form.contact_method(class='form-control') }}
+            {{ form.contact_method.label() }}
+          </div>
+          <div class="form-floating mb-3">
+            {{ form.comment(class='form-control') }}
+            {{ form.comment.label() }}
+          </div>
+          <!-- <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button> -->
+          {{ form.submit(class='w-100 btn btn-lg btn-primary') }}
+          <hr class="my-4">
+          <small class="text-muted"></small>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
