@@ -6,7 +6,49 @@
 {% endblock %}
 
 {% block content %}
+
 <main role="main">
+
+<!-- Модальное окно -->
+<div class="modal fade" id="zayavForm" data-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Записаться на занятие</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="form  rounded-3 ">
+          {{form.hidden_tag()}}
+
+        <div class="form-floating mb-3">
+          {{ form.desired_day(class='form-control') }}
+          {{ form.desired_day.label() }}
+        </div>
+        <div class="form-floating mb-3">
+          {{ form.customer_name(class='form-control') }}
+          {{ form.customer_name.label() }}
+        </div>
+        <div class="form-floating mb-3">
+          {{ form.comment(class='form-control') }}
+          {{ form.comment.label() }}
+        </div>
+     
+        <hr class="my-4">
+        <small class="text-muted"></small>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+        {{ form.submit(class='w-100 btn btn-primary') }}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal end -->
+
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -28,7 +70,8 @@
           <div class="carousel-caption">
             <h1>Запись на занятия</h1>
             <p>Просто оставьте заявку и я свяжусь с вами, удобным вам способом.</p>
-            <p><a class="btn btn-lg btn-success" href="#">Записаться!</a></p>
+            <p><button class="btn btn-lg btn-success" data-toggle="modal" data-target="#zayavForm" >Записаться!</button></p>
+            
           </div>
         </div>
       </div>
@@ -158,4 +201,7 @@
     <p>&copy; 2021-2022 Е.Бланский &middot; {#<a href="#"></a> &middot; <a href="#">Terms</a>#}</p>
   </footer>
 </main>
+
+
+
 {% endblock %}

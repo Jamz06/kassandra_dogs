@@ -9,17 +9,17 @@ class ScheduleForm(FlaskForm):
 
     desired_day = DateField('День занятия')
     customer_name = StringField('Как к вам обращаться?')
-    customer_email = StringField('E-Mail для обратной связи')
-    customer_tel = StringField('Ваш телефон')
-    contact_method = SelectField(
-        'Предпочитаемый способ связи?',
-        choices=[
-            (1, 'Мессенджер'),
-            (2, 'Телефон')
-        ]
-    )
+    # customer_email = StringField('E-Mail для обратной связи')
+    # customer_tel = StringField('Ваш телефон')
+    # contact_method = SelectField(
+    #     'Предпочитаемый способ связи?',
+    #     choices=[
+    #         (1, 'Мессенджер'),
+    #         (2, 'Телефон')
+    #     ]
+    # )
     comment = TextAreaField(
-        'Комментарий'
+        'Оставьте свои контактные данные, для согласования занятия'
     )
     submit = SubmitField(
         'Записаться',
