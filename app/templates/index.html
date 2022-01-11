@@ -20,7 +20,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form class="form  rounded-3 ">
+        <form method="POST" class="form rounded-3 " action="/index">
           {{form.hidden_tag()}}
 
         <div class="form-floating mb-3">
@@ -38,17 +38,17 @@
      
         <hr class="my-4">
         <small class="text-muted"></small>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+        {{ form.submit(class='btn btn-primary') }}
       </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
-        {{ form.submit(class='w-100 btn btn-primary') }}
+       
       </div>
     </div>
   </div>
 </div>
 <!-- modal end -->
-
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
